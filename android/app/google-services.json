@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "375577879282",
+    "project_id": "drug-store-20f6e",
+    "storage_bucket": "drug-store-20f6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375577879282:android:4f9d9d1bf19eb8c8ed666b",
+        "android_client_info": {
+          "package_name": "com.example.drug_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375577879282-h1l1jjm674vd9b844g4sjou7558e6m4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-avMjaaiiB4OgAFek2yMk7DLTzNrI9IY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375577879282-h1l1jjm674vd9b844g4sjou7558e6m4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

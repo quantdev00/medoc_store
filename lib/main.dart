@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     // routes: {
-    //   signUpRoute: (context) => const HomeView(),
+    //   "/package:drug_store/view/home_page.dart": (context) => const HomePage(),
     // },
     debugShowCheckedModeBanner: false,
     title: 'Flutter Demo',

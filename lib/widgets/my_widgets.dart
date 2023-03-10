@@ -16,3 +16,22 @@ Widget lineSettings = Container(
   width: 15,
   color: Colors.grey,
 );
+
+// App bar widget
+Widget appBar = Row(
+  children: [
+    TextButton(
+      onPressed: () {},
+      onFocusChange: null,
+      child: Column(
+        children: [
+          lineSettings,
+          const SizedBox(height: 10),
+          lineSettings,
+          const SizedBox(height: 10),
+          lineSettings,
+        ],
+      ),
+    ),
+  ],
+);

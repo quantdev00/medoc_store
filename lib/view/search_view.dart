@@ -1,4 +1,5 @@
 import 'package:drug_store/constants/constant.dart';
+import 'package:drug_store/view/add_medoc_view.dart';
 import 'package:drug_store/widgets/my_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,13 @@ class _SearchViewState extends State<SearchView> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Style.blueColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: ((context) => const AddDrugView()),
+            ),
+          );
+        },
         child: const Text(
           "+",
           style: TextStyle(fontSize: 25),
@@ -26,25 +33,7 @@ class _SearchViewState extends State<SearchView> {
         child: Column(
           children: [
             //* App bar
-            Stack(children: [
-              Row(
-                children: [
-                  TextButton(
-                    onPressed: () {},
-                    onFocusChange: null,
-                    child: Column(
-                      children: [
-                        lineSettings,
-                        const SizedBox(height: 10),
-                        lineSettings,
-                        const SizedBox(height: 10),
-                        lineSettings,
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ]),
+            appBar,
             //* App bar end
             const SizedBox(height: 20),
             //* Next session

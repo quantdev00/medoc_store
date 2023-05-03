@@ -10,9 +10,9 @@ class AddDrugView extends StatefulWidget {
 }
 
 class _AddDrugViewState extends State<AddDrugView> {
-  final _drug_name = TextEditingController();
-  final _drug_description = TextEditingController();
-  final _drug_price = TextEditingController();
+  final _drugName = TextEditingController();
+  final _drugDescription = TextEditingController();
+  final _drugPrice = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -20,7 +20,7 @@ class _AddDrugViewState extends State<AddDrugView> {
   Widget build(BuildContext context) {
     //*Drug name textfield config
     final drugNameTextField = TextFormField(
-      controller: _drug_name,
+      controller: _drugName,
       autofocus: false,
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
@@ -30,7 +30,7 @@ class _AddDrugViewState extends State<AddDrugView> {
     );
     //* Description field right here
     final descriptionTextField = TextFormField(
-      controller: _drug_description,
+      controller: _drugDescription,
       autofocus: false,
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
@@ -41,7 +41,7 @@ class _AddDrugViewState extends State<AddDrugView> {
 
     //* Field get Price
     final priceTextField = TextFormField(
-      controller: _drug_price,
+      controller: _drugPrice,
       autofocus: false,
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
@@ -68,9 +68,9 @@ class _AddDrugViewState extends State<AddDrugView> {
         onPressed: () async {
           if (_formKey.currentState!.validate()) {
             var response = await FirebaseCrud.addDrug(
-                name: _drug_name.text,
-                description: _drug_description.text,
-                price: _drug_price.text);
+                name: _drugName.text,
+                description: _drugDescription.text,
+                price: _drugPrice.text);
             if (response.code != 200) {
               showDialog(
                   context: context,
@@ -97,7 +97,6 @@ class _AddDrugViewState extends State<AddDrugView> {
       ),
     );
     //* end of save button.
-    
 
     return Material(
       child: SingleChildScrollView(

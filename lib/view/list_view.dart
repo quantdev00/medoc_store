@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:drug_store/backend/services/firebase_crud.dart';
+import 'package:drug_store/view/add_page.dart';
 import 'package:flutter/material.dart';
 
 class MyListView extends StatefulWidget {
@@ -8,6 +9,7 @@ class MyListView extends StatefulWidget {
 }
 
 class _ListViewState extends State<MyListView> {
+  // String myString = ;
   final Stream<QuerySnapshot> collectionReference =
       FirebaseCrud.getDrugRecord();
   @override
@@ -65,6 +67,10 @@ class _ListViewState extends State<MyListView> {
                     );
                   }).toList(),
                 ));
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
           }
         },
       ),

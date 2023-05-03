@@ -20,7 +20,7 @@ class _ListViewState extends State<MyListView> {
         title: const Text("Drug list"),
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.app_registration,
               color: Colors.white,
             ),

@@ -25,6 +25,8 @@ class _AddDrugViewState extends State<AddDrugView> {
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
           return 'This field is required';
+        } else {
+          return 'NOthing';
         }
       },
     );
@@ -35,6 +37,8 @@ class _AddDrugViewState extends State<AddDrugView> {
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
           return 'This field is required';
+        } else {
+          return 'Pass';
         }
       },
     );
@@ -46,6 +50,8 @@ class _AddDrugViewState extends State<AddDrugView> {
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
           return 'This field is required';
+        } else {
+          return 'Nothing';
         }
       },
     );

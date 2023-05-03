@@ -1,5 +1,5 @@
 import 'package:drug_store/backend/services/firebase_crud.dart';
-import 'package:drug_store/widgets/my_widgets.dart';
+import 'package:drug_store/view/list_view.dart';
 import 'package:flutter/material.dart';
 
 class AddDrugView extends StatefulWidget {
@@ -53,11 +53,11 @@ class _AddDrugViewState extends State<AddDrugView> {
     //* View list button
     final viewDrugListButton = TextButton(
       onPressed: () {
-        Navigator.of(context).push(ListView());
-        // Navigator.pushAndRemoveUntil<dynamic>(
-        //     context,
-        //     MaterialPageRoute<dynamic>(builder: ((context) => ListPage())),
-        //     (route) => false);
+        // Navigator.of(context).push(MyListView());
+        Navigator.pushAndRemoveUntil<dynamic>(
+            context,
+            MaterialPageRoute<dynamic>(builder: ((context) => MyListView())),
+            (route) => false);
       },
       child: const Text('View list drug list'),
     );
@@ -90,12 +90,14 @@ class _AddDrugViewState extends State<AddDrugView> {
             }
           }
         },
-        child: Text(
+        child: const Text(
           "Save",
           textAlign: TextAlign.center,
         ),
       ),
     );
+    //* end of save button.
+    
 
     return Material(
       child: SingleChildScrollView(
